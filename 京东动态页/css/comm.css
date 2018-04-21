@@ -1,0 +1,12 @@
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+
+.login-choice2{
+    color: #e4393c;
+}

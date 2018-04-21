@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>京东-欢迎登录</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/comm.css">
+    <link rel="icon" href="img/vivo.jpg">
+</head>
+<body>
+<div style="width: 990px; margin: 0 auto">
+    <div id="logo">
+        <a><img src="img/logo-201305-b.png" alt="logo" style="width: 170px; height: 60px;"></a>
+        <div class="la"></div>
+    </div>
+    <div style="clear: both"></div>
+</div>
+
+<div id="content">
+    <div style="width: 100%; background: #fff8f0; padding: 10px 0; text-align: center; margin: 0;">
+        <div style="width: 90%; margin: auto">
+            <p>依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号验证！ 新版《京东隐私政策》已上线，将更有利于保护您的个人隐私。</p>
+        </div>
+    </div>
+
+    <div style="width: 100%; height: 475px;background: #013ff4;">
+        <div style="width: 990px; height: 475px; margin: 0 auto;">
+            <div class="show"></div>
+            <div class="login">
+                <div style="padding: 10px 0; background: #fff8f0;text-align: center; font-size: 12px;">
+                    <p>京东不会以任何理由要求您转账汇款，谨防诈骗。</p>
+                </div>
+                <div style="width: 173px; height: 54px; float: left; position: absolute; left: 0;">
+                    <a id="slogin" class="login-style login-choice2" href="">扫码登录</a>
+                </div>
+                <div style="width: 173px; height: 54px; float: right; position: absolute; right: 0;">
+                    <a id="zlogin" class="login-style" onclick="login()">账户登录</a>
+                </div>
+
+                <div style="width: 306px; height: 268px;padding: 20px;">
+                    <!-- 扫描登录环节 -->
+                    <div id="snlogin" style="width: 306px; height: 223px; margin-top: 55px;">
+                        <div style="text-align: center">
+                            <img src="img/show.png" alt="二维码">
+                        </div>
+                        <div style="width: 257px; margin: 18px auto 14px; text-align: center">
+                            <ul>
+                                <li style="font-size: 12px; color: #585454;">打开手机京东&nbsp;&nbsp;扫描二维码</li>
+                            </ul>
+                        </div>
+                        <div style="margin-left: 40px;color: #999999; line-height: 25px;">
+                            <ul class="qr">
+                                <li><b></b><em>免输入</em></li>
+                                <li><b style="background-position-x: -27px;"></b><em>更快</em></li>
+                                <li><b style="background-position-x: -54px;"></b><em>更安全</em></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 账户密码登录环节-->
+                    <div id="znlogin" class="hidden" style="width:306px; height: 228px;">
+                        <div style="height: 35px;"></div>
+                        <div style="margin: 5px 0; min-height: 23px;"></div>
+                        <div class="form" style="height: 190px;">
+                            <form method="post" action="index.html">
+                                <div style="width: 304px; height: 38px; position: relative; border: 1px solid #bdbdbd; margin-bottom: 20px;">
+                                    <label class="login-lable" for="loginname" style="background-position: 0 -47px"></label>
+                                    <input id="loginname" name="user" type="text" placeholder="邮箱/用户名/已验证手机" style="width: 254px; height: 18px;
+                                    line-height: 18px;font-size: 14px;padding: 10px 0 10px 50px; border: hidden;">
+
+                                </div>
+                                <div style="width: 304px; height: 38px; position: relative; border: 1px solid #bdbdbd; margin-bottom: 20px;">
+                                    <label class="login-lable" for="loginpwd" style="background-position: -48px -47px"></label>
+                                    <input id="loginpwd" name="user" type="password" placeholder="密码" style="width: 254px; height: 18px;
+                                    line-height: 18px;font-size: 14px;padding: 10px 0 10px 50px; border: hidden;">
+                                </div>
+
+                                <div style="width: 306px; height: 18px; margin-bottom: 20px;">
+                                    <a href="" style="color: #666; font-size: 12px; display: inline-block; float: right;line-height: 18px">忘记密码</a>
+                                </div>
+
+                                <div style="width: 304px; height: 32px; margin-bottom: 10px; background-color: red; border: 1px solid red">
+                                    <a href="index.html"  style="width: 302px; height: 31px; display: block; text-align: center;
+                                    line-height: 31px;font-size: 20px; color: #fff;" onclick="loginname()">登&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;录</a>
+                                </div>
+
+                            </form>
+                            <div style="clear: both;"></div>
+                        </div>
+                    </div>
+
+
+                    <div style="clear: both"></div>
+                </div>
+
+
+
+
+
+                <!-- 末尾固定环节 -->
+                <ul class="tence" style="width: 306px; padding: 0 20px; position: absolute;margin: 0 auto;
+                       border-top: 1px solid #f4f4f4; height: 50px; background-color: #fcfcfc;">
+                    <li style="width:68px; height: 50px; float: left;position: relative;">
+                        <b></b>
+                        <a href=""
+                           style="height: 50px; position: absolute; left: 24px; display: block; line-height: 50px; font-size: 12px;">QQ</a>
+                        <span style="padding: 0 10px; color: #cccccc;line-height: 50px; float: right;">|</span>
+                    </li>
+                    <li style="width:48px; height: 50px; float: left;position: relative;">
+                        <b style="background-position: -19px 0;"></b>
+                        <a href=""
+                           style="height: 50px; position: absolute; left: 24px; display: block; line-height: 50px; font-size: 12px;">微信</a>
+                    </li>
+                    <li style="width:77px; height: 50px; float: right;position: relative;">
+                        <b style="background: url(img/pwd-icons-new.png) no-repeat 100% 49%;"></b>
+                        <a href="register.html"
+                           style="height: 50px; position: absolute; left: 24px; display: block; line-height: 50px; font-size: 12px;">立即注册</a>
+                    </li>
+                </ul>
+                <div style="clear: both"></div>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="js/comm.js"></script>
+
+</body>
+</html>

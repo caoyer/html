@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理</title>
+
+    <style>
+        .pg-header{
+            height: 50px;
+            background-color: #ddd;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        .pg-body{
+            width: 500px;
+            height: 300px;
+            min-width: 200px;
+            background-color: darkgrey;
+            margin: 0 auto;
+        }
+
+        .pg-body .choice{
+            padding: 5px 5px 5px 40px;
+        }
+
+        .pg-body .choice input:hover{
+            cursor: pointer;
+        }
+
+        .pg-body .choice .a1{
+            /*background: #ce6f6f;*/
+            color: #286b27;
+            font-weight: bold;
+            width: 80px;
+            font-size: 13px;
+        }
+
+        #t1{
+           text-align: center;
+        }
+
+        #t1 .status{
+            /*background: darkgrey;*/
+            color: black;
+        }
+        #t1 td{
+            width: 80px;
+        }
+
+        .edit{
+            width: 80px;
+            font-size: 14px;
+        }
+
+    </style>
+
+</head>
+<body style="margin: 0; background: #7C8395;">
+
+    <div class="pg-header">统一后台管理</div>
+
+    <div class="pg-body">
+        <div class="choice">
+            <input type="button" value="全选" onclick="Select()">
+            <input type="button" value="反选" onclick="Revser()">
+            <input type="button" value="取消" onclick="Cancel()">
+            <input class="a1" type="button" value="非编辑模式">
+        </div>
+
+        <table id="t1" border="1">
+            <tr>
+                <th>选择</th>
+                <th>主机</th>
+                <th>端口</th>
+                <th>状态</th>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox"></td>
+                <td name="host">10.10.10.1</td>
+                <td name="port">21</td>
+                <td style="width: 52px;">
+                    <select class="status" name="status" disabled="disabled">
+                        <option value="1" selected="selected">在线</option>
+                        <option value="0">下线</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox"></td>
+                <td name="host">10.10.10.2</td>
+                <td name="port">22</td>
+                <td style="width: 52px;">
+                    <select class="status" name="status" disabled="disabled">
+                        <option value="1" selected="selected">在线</option>
+                        <option value="0">下线</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox"></td>
+                <td name="host">10.10.10.3</td>
+                <td name="port">23</td>
+                <td style="width: 52px;">
+                    <select class="status" name="status" disabled="disabled">
+                        <option value="1" selected="selected">在线</option>
+                        <option value="0">下线</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox"></td>
+                <td name="host">10.10.10.4</td>
+                <td name="port">24</td>
+                <td style="width: 52px;">
+                    <select class="status" name="status" disabled="disabled">
+                        <option value="1" selected="selected">在线</option>
+                        <option value="0">下线</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="jquery-1.12.4.js"></script>
+
+    <script>
+        $('.choice .a1').click(function () {
+            $('.choice .a1').toggleClass('edit');
+            if($('.choice .a1').hasClass('edit')){
+                $(this).val('编辑模式');
+            }else{
+                $('#t1 input[type="checkbox"]').prop('checked',false);
+                $(this).val('非编辑模式');
+            }
+            checked_edit();
+        });
+
+
+//        $('.choice .a1').click(function () {
+//            if($('.choice .a1').hasClass('edit')){
+//                $('#t1 input[type="checkbox"]').each(function () {
+//                    $(this).prop('checked',false);
+//                });
+//                $(this).val('非编辑模式');
+//                $(this).removeClass('edit');
+//            }else{
+//                $(this).val('编辑模式');
+//                $(this).addClass('edit');
+//                console.log(this);
+//            }
+//            checked_edit();
+//        });
+
+        function checked_edit() {
+//            1. 判断时如果checked=true
+//            2. 更改这一行的编辑模式
+            $('#t1 input[type="checkbox"]').each(function () {
+                if($(this).prop('checked')){
+                    console.log(this);
+                    $(this).parent().siblings().each(function () {
+                        console.log(this);
+
+                        if($(this).html() != $(this).text()){
+                            console.log($($(this).html()).children('select'));
+
+                            console.log(1111);
+                            $(this).children('select').removeAttr('disabled');
+                        }else{
+                            console.log(2222);
+                            var v = $(this).text();
+                            console.log(v);
+                            var i = document.createElement('input');
+                            $(this).html($(i).attr('type',"text"));
+                            $(this).html($(i).attr('value',v));
+                            $(this).html($(i).addClass('edit'));
+                        }
+                    });
+                }else{
+                    $(this).parent().siblings().each(function () {
+                        console.log(this);
+
+                        if($(this).html() != $(this).text()){
+                            var tags = $(this);
+                            tags.children('input').each(function () {
+                                var v = $(this).val();
+                                tags.text(v);
+                            });
+                            $(this).children('select').attr('disabled','disabled');
+                        }
+                    });
+
+                }
+
+            });
+
+        }
+
+        function Select() {
+            $('#t1 input[type="checkbox"]').prop('checked',true);
+            if($('.choice .a1').hasClass('edit')){
+                checked_edit();
+            }
+        }
+
+        function Revser() {
+            $('#t1 input[type="checkbox"]').each(function () {
+                if($(this).prop('checked')){
+                    $(this).prop('checked',false);
+                }else{
+                    $(this).prop('checked',true);
+                }
+            });
+            if($('.choice .a1').hasClass('edit')){
+                checked_edit();
+            }
+        }
+
+        function Cancel() {
+            $('#t1 input[type="checkbox"]').prop('checked',false);
+            if($('.choice .a1').hasClass('edit')){
+                checked_edit();
+            }
+            $('.choice .a1').removeClass('edit');
+            $('.choice .a1').val("非编辑模式");
+
+        }
+
+        $('#t1 td input[type="checkbox"]').click(function () {
+            if($('.choice .a1').hasClass('edit')){
+                checked_edit();
+            }
+
+        });
+
+
+    </script>
+
+</body>
+</html>

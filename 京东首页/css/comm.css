@@ -1,0 +1,152 @@
+.c2{
+    text-align: center;
+    /*display: inline-block;*/
+    /*border: 1px solid #DDDDDD;*/
+    /*border: 1px solid red;*/
+    border: hidden;
+}
+
+.c1{
+    background-color: #e3e4e5;
+    border: 1px solid #DDDDDD;
+}
+
+.c3{
+    width: 760px;
+    /*height: 25px;*/
+    padding-top: 45px;
+    padding-left: 370px;
+    padding-bottom: 0;
+    padding-right: 162px;
+    float: left;
+}
+
+.c4{
+    font-size: small;
+    color: #999;
+    margin-left: 370px;
+    float: left;
+}
+
+.c5{
+    height: 30px;
+    line-height: 30px;
+    padding-top: 30px;
+    float: left;
+}
+
+/*.c6{*/
+    /*margin: 0;*/
+    /*background-color: #FFFFFF;*/
+    /*float: left;*/
+    /*padding-left: 0px;*/
+/*}*/
+.item_div{
+    background-color: #FFFFFF;
+    float: left;
+}
+
+div ul{
+    width: 208px;
+    height: 480px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid #DDDDDD;
+    background-color: #FFFFFF;
+    float: left;
+    padding-left: 0;
+    margin: 0;
+}
+
+
+/*ul li a{*/
+    /*width: 100%;*/
+    /*height:26px;*/
+    /*line-height: 26px;*/
+    /*padding-left: 10px;*/
+    /*text-align: left;*/
+    /*float: left;*/
+    /*border: 1px solid red;*/
+/*}*/
+
+ul li a{
+    font-size: 14px;
+    color: #626262;
+    list-style-type: none;
+}
+
+ul li a span{
+    padding: 0 2px;
+    font-size: 12px;
+    text-align: match-parent;
+    line-height: 28px;
+    color: #4D6878;
+}
+
+.action-menu{
+    background-color: black;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.c10{
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    float: left;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+.c11{
+    text-decoration: line-through;
+    text-decoration-color: red;
+    font-size: 20px;
+}
+
+p{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    width:130px;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 30px;
+}
+
+.item_name{
+    width: 80px;
+    height: 20px;
+    float: left;
+    display: inline-block;
+    border: 1px solid red;
+}
+
+ul li{
+    list-style-type: none;
+    width: 194px;
+    height:26px;
+    line-height: 26px;
+    padding-left: 14px;
+    text-align: left;
+    float: left;
+    /*border: 1px solid red;*/
+}
+
+a{
+    text-decoration: none;
+}
+
+div{
+    display: block;
+}
+
+.item_a{
+    border: 1px solid #DDDDDD;
+    width: 213px;
+    height: 268px;
+    background-color: #FFFFFF;
+    display: inline-block;
+    float: left;
+}

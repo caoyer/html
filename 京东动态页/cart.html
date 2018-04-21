@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的购物车</title>
+    <link rel="stylesheet" href="css/comm.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="icon" href="img/vivo.jpg">
+    <style>
+        img{
+            border: none;
+        }
+    </style>
+</head>
+<body style="margin: 0;">
+
+<div style="height: 30px; background-color: #e3e4e5;">
+    <div style="width: 990px; height: 30px; margin: 0 auto;">
+        <ul style="width: 151px; float: left;">
+            <li style="width: 73px; height: 30px; padding-left: 20px; float: left;">
+                <div style="width: 19px; height: 22px; background: url(img/icon.jpg) no-repeat 11% 7%; display: inline-block; position: relative; top: 4px;"></div>
+                <a href="index.html" style="font-size: 12px; vertical-align: text-top;">京东首页</a>
+            </li>
+            <li style="width: 44px; height: 30px;padding: 0 7px; float: left;">
+                <div style=" display: inline-block; width: 10px; height: 16px; margin-right: 1px; margin-top: 8px;
+                    background: url(img/icon.jpg) no-repeat 32.9% 6.9%; background-size: 400px;"></div>
+                <span style="width:20px;font-size: 12px; vertical-align: text-top; color: #999999;" title="北京">北京</span>
+            </li>
+        </ul>
+        <ul style="width: 767px; height: 30px; float: right;">
+            <li class="pg-header" style="width:191px; float: left; margin-right: 8px">
+                <a href="login.html">你好,请登录</a>
+            </li>
+            <li class="pg-header1">|</li>
+            <li class="pg-header" style="width: 48px; float: left; padding: 0 7px">
+                <a href="">我的订单</a>
+            </li>
+            <li class="pg-header1">|</li>
+            <li class="pg-header" style="width: 48px; float: left; padding: 0 7px">
+                <a href="">我的京东</a>
+            </li>
+            <li class="pg-header1">|</li>
+            <li class="pg-header" style="width: 48px; float: left; padding: 0 15px">
+                <a>京东会员</a>
+            </li>
+            <li class="pg-header1">|</li>
+            <li class="pg-header" style="width: 48px; float: left; padding: 0 7px;">
+                <a>企业采购</a>
+            </li>
+            <li class="pg-header1">|</li>
+            <li class="pg-header" style="width: 48px; float: left; padding: 0 15px;">
+                <a>客户服务</a>
+            </li>
+            <li class="pg-header1">|</li>
+            <li class="pg-header" style="width: 48px; float: left; padding: 0 15px;">
+                <a>网站导航</a>
+            </li>
+            <li class="pg-header1">|</li>
+            <li class="pg-header" style="width: 57px; float: left; padding: 0 7px;">
+                <a>手机京东</a>
+            </li>
+
+        </ul>
+        <div style="clear: both"></div>
+    </div>
+</div>
+
+<div style="width: 990px; height: 87px; padding: 10px 0 0;margin: auto;">
+    <div style="width: 277px;height: 50px; margin: 15px 0 22px; float: left;">
+        <img src="img/logo-201305-b.png" alt="logo" style="width: 134px; height: 42px; float: left;">
+        <img src="img/cart-icon.png" alt="logo-title" style="width: 100px; height: 40px;">
+    </div>
+    <div style="width: 320px; height: 24px;float: right;border: 2px solid #c91623; margin-top: 30px;">
+        <input type="text" style="width: 260px; height: 18px; padding: 3px 5px; float: left;border: none;">
+        <button type="button" style="width:50px; height:24px;font-weight: bold; color: white;background: #c91623;
+         float: left;border: none;">搜索</button>
+    </div>
+    <div style="clear: both"></div>
+</div>
+
+<div style="width: 990px; height: 320px; margin: 0 auto; position: relative;">
+    <div style="height: 37px; margin-top: 10px; position: relative;">
+        <ul style="height: 26px; float: left;">
+            <li style="height: 26px; line-height: 26px; margin: 5px 30px 0 0; padding: 0 0 10px; float: left">
+                <a href="" class="login-choice2" style="font-weight: 700; font-size: 16px;">全部商品</a>
+            </li>
+            <li style="height: 26px; line-height: 26px; margin: 5px 30px 0 0; padding: 0 0 10px; float: left">
+                <a href="" style="font-weight: 700; font-size: 16px;">京东大药房</a>
+            </li>
+        </ul>
+        <div style="width: 174px;height: 26px; margin-bottom: 10px; padding-left: 122px; float: right;">
+            <span style="line-height: 36px; font-size: 12px;">配送至：</span>
+            <div style="width: 114px; height: 26px;border: 1px solid #ddd; padding-right: 10px;
+            position: relative; float: right;">
+                <span style="font-size: 12px;">广东省广州市白云区</span>
+                <div style="position: absolute;top: -2px; right: 1px;">
+                    <div style="width: 9px; height: 8px; display: inline-block;
+                    background: url(img/pwd-icons-new.png) no-repeat 93% 59%"></div>
+                </div>
+            </div>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+
+    <div style="height: 242px;">
+        <div style="height: 32px; padding: 5px 0; margin-bottom: 10px; background: #ddd;">
+            <div style="height: 18px; line-height: 18px; padding: 7px 0 0 11px; width: 122px;float: left;">
+                <input id="sa1" type="checkbox" onclick="SelectAll()">
+                <span>全选</span>
+            </div>
+            <div class="pg-body1" style="width: 208px;">商品</div>
+            <div class="pg-body1" style="width: 140px;padding: 0 15px"></div>
+            <div class="pg-body1" style="width: 120px;padding-right: 40px;text-align: right">单价</div>
+            <div class="pg-body1" style="width: 80px;text-align: center">数量</div>
+            <div class="pg-body1" style="width: 100px;padding-right: 40px;text-align: right">小计</div>
+            <div class="pg-body1" style="width: 75px;text-align: left">操作</div>
+        </div>
+        <div style="height: 230px;">
+            <div style="height: 30px; padding-left: 11px; font-weight: 700; line-height: 30px;">
+                <input class="select" type="checkbox" name="jdzy" onclick="SelectKinds()" style="vertical-align: middle">
+                <div style="width: 54px; height: 18px; background: url(img/cart-icons-201803.png) no-repeat 0 49%;
+                 display: inline-block; vertical-align: middle;"></div>
+            </div>
+            <div style="height: 198px;border-width: 2px 1px 1px; border-color: #aaa #F1F1F1 #F1F1F1; border-style: solid;">
+                <div style="height: 26px; padding: 5px 10px;">
+                    <a href="" style="color: #999; font-size: 12px;">
+                        <span style="width: 25px; line-height: 20px; display: inline-block;border: 1px solid #f48719; padding: 0 10px;">满减</span>
+                        活动商品购满¥159.00，即可享受满减></a>
+                    <a href="" style="color: #4c4646; font-size: 12px;">去凑单></a>
+                </div>
+                <div style="height: 160px;border-top: 1px solid #F1F1F1; padding: 0 0 1px 30px; position: relative; margin-bottom: 20px;">
+                    <div style="height: 25px; padding: 15px 0 10px; float: left; position: absolute;top: 5px; left: 0;">
+                        <input class="select" type="checkbox" name="jdzy-product">
+                    </div>
+                    <div style="width: 300px; height: 89px; padding: 15px 0 10px;position: relative; display: inline-block;float: left;">
+                        <img src="img/5aa5e67fNa704a90a.jpg" alt="口红" style="width: 80px; height: 80px; float: left; margin-right: 12px;">
+                        <div style="width: 208px; height: 40px;float: left;">
+                            <a href="" style="font-size: 12px;overflow: hidden;">
+                                【京东joy联名款】笛爱儿（daralis）口红 流光焕彩唇膏礼盒4支装 3.5g*4( 哑光 口红 持久保湿 显色)
+                            </a>
+                        </div>
+                        <div style="width: 208px;float: left; background-color: white;">
+                            <span style="width: 18px; height: 17px; background: url(img/cart-icons-201803.png) no-repeat 66% 6%;
+                            display: inline-block;vertical-align: middle;"></span>
+                            <a href="" style="color: #6485cb; font-size: 12px;">支持7天无理由退货</a>
+                        </div>
+                    </div>
+                    <div style="width: 150px; height: 10px; padding: 15px 0 0 20px; float: left;"></div>
+                    <div style="width: 150px; height: 45px; padding: 15px 40px 10px 0; text-align: right;float: left;">
+                        <div id="price" style="height: 20px; text-align: right">89.00</div>
+                        <div style="height: 20px; text-align: right;">
+                            <a style="width: 40px; height: 18px; border: 1px solid red; position: relative;display: inline-block;">
+                                <span style="font-size: 12px; color: red; padding:0 13px 0 2px;display: block; line-height: 18px;text-align: left;">促销</span>
+                                <span style="width: 10px; height: 7px; background: url(img/cart-icons-201803.png) no-repeat 51% 0;
+                                position: absolute; top: 7px; right: 1px;"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div style="width: 80px; height: 42px;padding: 15px 0 10px; float: left;">
+                        <div style="height: 20px;">
+                            <a id="minu" onclick="MinuPrice()" style="width: 14px;height: 20px;display: inline-block; text-align: center;
+                             line-height: 20px;border: 1px solid #e6e6e6;float: left;">-</a>
+                            <input id="num" type="text" value="1" style="width: 42px;height: 18px;border: 1px solid #e6e6e6;
+                            float: left; text-align: center; line-height: 20px;">
+                            <a id="plus" onclick="PlusPrice()" style="width: 14px; height: 20px;display: inline-block; text-align: center;
+                            line-height: 20px;border: 1px solid #e6e6e6; float: left;">+</a>
+                        </div>
+                        <div style="height: 20px;text-align: center; line-height: 20px; font-size: 12px; color: #beb9b9;">有货</div>
+                    </div>
+
+                    <div style="width: 100px; height: 40px; padding: 15px 40px 10px 0;float: left;">
+                        <div id="total" style="text-align: right; height: 20px;line-height: 20px;">¥89.00</div>
+                        <div style="height: 20px; text-align: right; font-size: 12px; color: #514e4e;">0.3kg</div>
+                    </div>
+
+                    <div style="width: 75px; height: 60px;padding: 15px 0 10px; float: left;">
+                        <a href="" style="height:20px;font-size: 12px; color: #514e4e;display: block;">删除</a>
+                        <a href="" style="height:20px;font-size: 12px; color: #514e4e;display: block;">移到我的关注</a>
+                        <a href="" style="height:20px;font-size: 12px; color: #514e4e;display: block;">加入我的关注</a>
+                    </div>
+                    <div style="height: 40px; width: 960px; margin-bottom: 10px;">
+                        <div class="small-title" style="height: 20px; width: 960px;float: left;">
+                            <a href="" style="font-size: 12px; color: #999;display: block;">
+                                    【赠品】笛爱儿（daralis）蜗牛眼膜贴6g*1对(眼贴膜 眼膜贴 去淡化黑眼圈 眼袋细纹补水)
+                            </a>
+                        </div>
+                        <div class="small-title" style="height: 20px; width: 960px;float: left;">
+                            <a href="" style="font-size: 12px; color: #999;display: block;">
+                                    【赠品】笛爱儿（daralis）深海凝萃清润洁面卸妆膜5g*1片 (卸妆湿巾 深层清洁 脸眼唇部温和清洁)
+                            </a>
+                        </div>
+                    </div>
+                    <div style="clear: both;"></div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+        <!-- 判断页面大小 -->
+    <div  class="pg-bottom">
+        <div class="pg-bottom1" style="width: 45px; padding: 16px 0 16px 9px; display: inline-block;float: left">
+            <input id="sa2" type="checkbox" onclick="SelectAll()" style="margin: 0; vertical-align: middle; ">
+            <span style="position: relative; top: 1px;">全选</span>
+        </div>
+        <div class="pg-bottom2" style="width: 310px;float: left;">
+            <a href="" style="width: 84px;">删除选中的商品</a>
+            <a href="" style="width: 72px;">移到我的关注</a>
+        </div>
+        <div  class="pg-bottom3" style="width: 624px; float: right;">
+            <a href="">去结算</a>
+            <div class="pg-bottom3-1">
+                <div style="width: 50px; text-align: right;">总价：</div>
+                <div id="cost" style="width: auto;font-weight: 700; color: #e4393c; font-size: 16px;">¥0.00</div>
+                <div style="width: 12px; height: 18px;margin-left: 5px; float: right;
+                background: url(img/price-tips.png) no-repeat"></div>
+                <div style="width: 50px;text-align: right;">已节省：</div>
+                <div id="cutdown" style="width: auto;">-¥0.00</div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript" src="js/comm.js"></script>
+</body>
+</html>
